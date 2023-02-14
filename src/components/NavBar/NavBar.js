@@ -1,15 +1,18 @@
 import React from "react";
 import "./NavBar.css";
-import CartWidget from "../CartWidget";
+import SearchIcon from "@mui/icons-material/Search";
+import CartWidget from "../CartWidget/CartWidget";
 
 const NavBar = () => {
   return (
     <header className="header">
       <div className="topHeader">
         <h1 className="logo"> Decó </h1>
-        <form className="searchForm">
-          <input type="text" />
-          <i>O</i>
+        <form className="searchForm" id="searchForm">
+          <input type="text" placeholder="SEARCH" />
+          <button>
+            <SearchIcon />
+          </button>
         </form>
         <div className="topHeader-right">
           <CartWidget />

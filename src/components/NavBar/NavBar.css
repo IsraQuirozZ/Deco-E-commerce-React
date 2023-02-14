@@ -1,0 +1,85 @@
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-color: var(--colorTerciario);
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.topHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+  gap: 50px;
+}
+
+.logo {
+  font-size: 50px;
+  margin: 0;
+  /* width: 25%; */
+}
+
+.searchForm {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.searchForm input {
+  border: none;
+  border-radius: 20px 0 0 20px;
+  text-align: center;
+  height: 30px;
+  width: 100%;
+}
+
+.searchForm button {
+  border: none;
+  background-color: pink;
+  background-color: white;
+  height: 32px;
+  width: 30px;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
+}
+
+.topHeader-right {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  /* width: 25%; */
+}
+
+.divider {
+  width: 100%;
+  border-bottom: 5px solid var(--colorSecundario);
+}
+
+.navBar {
+  /* width: 50%; */
+  display: flex;
+  place-content: center;
+}
+
+.navLinks {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navLink a {
+  color: white;
+  font-size: 17px;
+}
+
+.navLink a:hover {
+  cursor: pointer;
+  color: var(--colorSecundario);
+}
