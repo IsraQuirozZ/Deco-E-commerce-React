@@ -1,0 +1,32 @@
+.item {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.itemImg {
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+}
+
+.itemName {
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+.descOne {
+  color: rgb(73, 73, 73);
+}
+
+.itemPrice {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.itemInfo-bottom {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

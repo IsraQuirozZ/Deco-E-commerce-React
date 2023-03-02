@@ -1,0 +1,26 @@
+.counter {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.counterBtn {
+  border: none;
+  background-color: #749f82;
+  width: 30px;
+  height: 30px;
+  color: white;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.counterBtn:hover {
+  cursor: pointer;
+  background-color: #609966;
+}
+
+.countNum {
+  font-size: 20px;
+  font-weight: bold;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 import SearchIcon from "@mui/icons-material/Search";
 import CartWidget from "../CartWidget/CartWidget";
@@ -7,7 +8,11 @@ const NavBar = () => {
   return (
     <header className="header">
       <div className="topHeader">
-        <h1 className="logo"> Decó </h1>
+        <h1 className="logo">
+          <Link to="/" style={{ color: "white" }}>
+            Decó
+          </Link>
+        </h1>
         <form className="searchForm" id="searchForm">
           <input type="text" placeholder="SEARCH" />
           <button>
@@ -22,16 +27,20 @@ const NavBar = () => {
       <nav className="navBar">
         <ul className="navLinks">
           <li className="navLink">
-            <a href="#"> Home </a>
+            <Link to={"/"}>Home</Link>
+            {/* <a href="#"> Home </a> */}
           </li>
           <li className="navLink">
-            <a href="#"> About Us </a>
+            <Link to={"/aboutUs"}>About Us</Link>
+            {/* <a href="#"> About Us </a> */}
           </li>
           <li className="navLink">
-            <a href="#"> Shop </a>
+            <Link to="/shop">Shop</Link>
+            {/* <a href="#"> Shop </a> */}
           </li>
           <li className="navLink">
-            <a href="#"> Contact </a>
+            <Link to={"/contact"}>Contact</Link>
+            {/* <a href="#"> Contact </a> */}
           </li>
         </ul>
       </nav>
