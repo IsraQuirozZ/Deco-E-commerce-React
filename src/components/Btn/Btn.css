@@ -1,4 +1,4 @@
-.cartBtn {
+.btn {
   border: none;
   background-color: #749f82;
   padding: 15px 25px;
@@ -8,7 +8,7 @@
   font-weight: bold;
 }
 
-.cartBtn:hover {
+.btn:hover {
   cursor: pointer;
   background-color: #609966;
 }

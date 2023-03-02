@@ -1,6 +1,6 @@
 import React from "react";
 import "./item.css";
-import CartBtn from "../CartBtn/CartBtn";
+import CartBtn from "../Btn/Btn";
 import { Link } from "react-router-dom";
 
 const Item = ({ item }) => {

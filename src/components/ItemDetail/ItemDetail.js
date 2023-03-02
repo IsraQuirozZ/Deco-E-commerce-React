@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./ItemDetail.css";
-import CartBtn from "../CartBtn/CartBtn";
+import CartBtn from "../Btn/Btn";
 import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({ data }) => {

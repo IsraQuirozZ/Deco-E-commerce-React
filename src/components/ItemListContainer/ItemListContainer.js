@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 // import { items } from "./items.js";
 import ItemList from "../ItemList/ItemList";
 import { Link, useParams } from "react-router-dom";
+import CartBtn from "../Btn/Btn";
+import "./ItemListContainer.css";
 
 const allItems = [
   {
@@ -79,14 +81,19 @@ const ItemListContainer = () => {
 
   return (
     <>
-      <div>
+      <h1>Categorías</h1>
+      <div className="categoryBtns">
+        <Link to={"/shop"}>
+          <CartBtn text="Todo" />
+        </Link>
         <Link to={"/shop/salas"}>
-          <button>Salas</button>
+          <CartBtn text="Salas" />
         </Link>
         <Link to={"/shop/sofas"}>
-          <button>Sofás</button>
+          <CartBtn text="Sofás" />
         </Link>
       </div>
+
       <ItemList items={items} />
     </>
   );

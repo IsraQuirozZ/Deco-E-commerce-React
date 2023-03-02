@@ -1,8 +1,8 @@
 import React from "react";
-import "./CartBtn.css";
+import "./Btn.css";
 
 const CartBtn = ({ text }) => {
-  return <button className="cartBtn">{text}</button>;
+  return <button className="btn">{text}</button>;
 };
 
 export default CartBtn;
