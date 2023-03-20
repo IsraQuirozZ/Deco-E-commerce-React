@@ -1,0 +1,11 @@
+.icon {
+  /* color: white;
+  color: rgb(194, 192, 192);
+  color: rgb(189, 170, 160); */
+  color: var(--fontColor);
+}
+
+.icon:hover {
+  cursor: pointer;
+  color: var(--colorSecundario);
+}

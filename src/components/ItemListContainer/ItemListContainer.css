@@ -1,5 +1,20 @@
 .categoryBtns {
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
-  margin: 20px 0;
+  padding: 20px 7%;
+  justify-content: center;
+}
+
+.itemListContainer {
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.categoryBtns a.active button {
+  box-shadow: white 0px 0px 0px 2px, black 0px 0px 0px 5px;
+  background-color: black;
 }

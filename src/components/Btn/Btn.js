@@ -1,8 +1,8 @@
 import React from "react";
 import "./Btn.css";
 
-const CartBtn = ({ text }) => {
+const Btn = ({ text, onBuy }) => {
   return <button className="btn">{text}</button>;
 };
 
-export default CartBtn;
+export default Btn;

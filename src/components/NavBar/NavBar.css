@@ -7,79 +7,72 @@ a {
 }
 
 .header {
-  background-color: var(--colorTerciario);
+  /* background-color: var(--colorBg); */
+  background-color: #e4e3e1ef;
   display: flex;
   flex-direction: column;
-  color: white;
 }
 
-.topHeader {
+.header__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 7%;
-  gap: 50px;
 }
 
-.logo {
+.header__top--left,
+.header__top--right {
+  display: flex;
+  gap: 20px;
+  width: 20%;
+  align-items: center;
+}
+
+.header__top--logo {
   font-size: 50px;
-  margin: 0;
-  /* width: 25%; */
+  color: var(--fontColor);
 }
 
-.searchForm {
-  width: 50%;
-  display: flex;
-  align-items: center;
+.header__top--right {
+  justify-content: end;
 }
-.searchForm input {
-  border: none;
-  border-radius: 20px 0 0 20px;
-  text-align: center;
-  height: 30px;
+
+.header__divider {
   width: 100%;
-}
-
-.searchForm button {
-  border: none;
-  background-color: pink;
-  background-color: white;
-  height: 32px;
-  width: 30px;
-  cursor: pointer;
-  border-radius: 0 20px 20px 0;
-}
-
-.topHeader-right {
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  /* width: 25%; */
-}
-
-.divider {
-  width: 100%;
-  border-bottom: 5px solid var(--colorSecundario);
+  border-bottom: 5px solid rgb(139, 123, 116);
+  border-bottom: 2px solid rgb(197, 182, 175);
 }
 
 .navBar {
-  /* width: 50%; */
   display: flex;
   place-content: center;
+  /* background-color: var(--colorBg); */
 }
 
 .navLinks {
   width: 60%;
   display: flex;
   justify-content: space-around;
+  padding: 15px 0;
 }
 
 .navLink a {
-  color: white;
-  font-size: 17px;
+  color: var(--fontColor);
+  font-size: 22px;
+  /* font-weight: bold; */
 }
 
 .navLink a:hover {
+  font-weight: bold;
   cursor: pointer;
   color: var(--colorSecundario);
+}
+
+nav a.active {
+  font-weight: bold;
+  color: var(--colorSecundario);
+  /* text-decoration: underline; */
+  border-bottom: 3px solid var(--colorSecundario);
+  padding: 2px;
+  text-shadow: 1px 2px 2px rgb(192, 186, 181);
 }

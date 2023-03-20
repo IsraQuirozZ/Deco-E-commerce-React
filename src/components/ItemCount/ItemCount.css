@@ -1,3 +1,11 @@
+.itemCount {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
 .counter {
   display: flex;
   gap: 20px;
@@ -17,7 +25,8 @@
 
 .counterBtn:hover {
   cursor: pointer;
-  background-color: #609966;
+  background-color: var(--colorHover);
+  border: 2px solid rgba(92, 92, 92, 0.679);
 }
 
 .countNum {

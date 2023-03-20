@@ -1,20 +1,20 @@
 import React from "react";
 import "./item.css";
-import CartBtn from "../Btn/Btn";
+import Btn from "../Btn/Btn";
 import { Link } from "react-router-dom";
 
 const Item = ({ item }) => {
   return (
     <div className="item">
-      <img className="itemImg" src={item.image} />
-      <h1 className="itemName">{item.name}</h1>
-      <p className="descOne">{item.descOne}</p>
-      <div className="itemInfo-bottom">
-        <p className="itemPrice">
-          <span>{item.price}€</span>
-        </p>
+      <img className="item__img" src={item.image} alt={item.name} />
+      <div className="item__divider"></div>
+      <h3 className="item__category">{item.category}</h3>
+      <h1 className="item__name">{item.name}</h1>
+      <p className="item__desc">{item.descOne}</p>
+      <div className="item__info">
+        <p className="item__info--price">{item.price}€</p>
         <Link to={`/detail/${item.id}`}>
-          <CartBtn text="See Product" />
+          <Btn text="See Product" />
         </Link>
       </div>
     </div>

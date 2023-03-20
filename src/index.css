@@ -6,20 +6,19 @@
   list-style: none;
 }
 :root {
-  --colorPrincipal: #222831;
-  --colorTerciario: #313b4b;
-  --colorSecundario: #d1aa6e;
-  --colorHover: #f05454;
+  --colorPrincipal: #749f82;
+  --colorSecundario: rgb(161, 141, 111);
+  --colorHover: #64ad75;
+  --colorBg: #ecebe5;
+  --fontColor: rgb(167, 153, 146);
 }
 
 body {
   margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif; */
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--colorBg);
 }
 
 code {

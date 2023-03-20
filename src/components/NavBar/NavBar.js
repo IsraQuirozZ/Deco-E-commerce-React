@@ -1,49 +1,48 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./NavBar.css";
-import SearchIcon from "@mui/icons-material/Search";
 import CartWidget from "../CartWidget/CartWidget";
+import Icon from "../Icon/Icon";
 
 const NavBar = () => {
   return (
     <header className="header">
-      <div className="topHeader">
-        <h1 className="logo">
-          <Link to="/" style={{ color: "white" }}>
-            Decó
-          </Link>
-        </h1>
-        <form className="searchForm" id="searchForm">
-          <input type="text" placeholder="SEARCH" />
-          <button>
-            <SearchIcon />
-          </button>
-        </form>
-        <div className="topHeader-right">
+      <div className="header__top">
+        <div className="header__top--left ">
+          <a href="facebook.com">
+            <Icon icon="fb" />
+          </a>
+          <a href="instagram.com">
+            <Icon icon="ig" />
+          </a>
+        </div>
+        <Link to="/">
+          <h1 className="header__top--logo">Decó</h1>
+        </Link>
+        <div className="header__top--right">
+          <Icon icon="account" />
+          <Icon icon="fav" />
           <CartWidget />
         </div>
       </div>
-      <div className="divider"></div>
+      <div className="header__divider"></div>
       <nav className="navBar">
         <ul className="navLinks">
           <li className="navLink">
-            <Link to={"/"}>Home</Link>
-            {/* <a href="#"> Home </a> */}
+            <NavLink to="/">Home</NavLink>
           </li>
           <li className="navLink">
-            <Link to={"/aboutUs"}>About Us</Link>
-            {/* <a href="#"> About Us </a> */}
+            <NavLink to="/aboutUs">About Us</NavLink>
           </li>
           <li className="navLink">
-            <Link to="/shop">Shop</Link>
-            {/* <a href="#"> Shop </a> */}
+            <NavLink to="/shop">Shop</NavLink>
           </li>
           <li className="navLink">
-            <Link to={"/contact"}>Contact</Link>
-            {/* <a href="#"> Contact </a> */}
+            <NavLink to="/contact">Contact</NavLink>
           </li>
         </ul>
       </nav>
+      <div className="header__divider"></div>
     </header>
   );
 };

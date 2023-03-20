@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./ItemCount.css";
+// import Btn from "../Btn/Btn";
 
-const ItemCount = () => {
-  const [count, setCount] = useState(1);
+const ItemCount = ({ stock, initial, onAdd }) => {
+  const [count, setCount] = useState(initial);
 
   const sum = () => {
-    setCount(count + 1);
+    if (count < stock) {
+      setCount(count + 1);
+    }
   };
 
   const res = () => {
@@ -14,15 +17,23 @@ const ItemCount = () => {
     }
   };
 
+  // const { cartList, addToCart } = useContext(CartContext);
+
   return (
-    <div className="counter">
-      <button className="counterBtn sub" onClick={res}>
-        -
+    <div className="itemCount">
+      <div className="counter">
+        <button className="counterBtn sub" onClick={res}>
+          -
+        </button>
+        <p className="countNum">{count === stock ? `${count} Max` : count}</p>
+        <button className="counterBtn add" onClick={sum}>
+          +
+        </button>
+      </div>
+      <button className="btn" onClick={() => onAdd(count)}>
+        Add to Cart
       </button>
-      <p className="countNum">{count}</p>
-      <button className="counterBtn add" onClick={sum}>
-        +
-      </button>
+      {/* <Btn text="Add to Cart" data={data} quantity={count} onClick={onAdd} /> */}
     </div>
   );
 };
