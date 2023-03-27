@@ -1,0 +1,55 @@
+.paymentForm {
+  background-color: rgba(0, 0, 0, 0.585);
+  display: flex;
+  padding: 10%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.paymentForm__form {
+  width: 50%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 7%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.paymentForm__form input {
+  height: 20px;
+}
+
+.payForm__form--metaDataCard {
+  display: flex;
+}
+
+.paymentForm__Form--btns {
+  display: flex;
+  /* height: 100p; */
+}
+
+.paymentBtn {
+  height: 100%;
+}
+
+.cardContainer {
+  width: 450px;
+  height: 250px;
+  background-color: skyblue;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.card__bottom {
+  display: flex;
+  justify-content: space-between;
+}
