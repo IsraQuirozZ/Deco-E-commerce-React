@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./ItemCount.css";
-// import Btn from "../Btn/Btn";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [count, setCount] = useState(initial);
@@ -17,8 +16,6 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     }
   };
 
-  // const { cartList, addToCart } = useContext(CartContext);
-
   return (
     <div className="itemCount">
       <div className="counter">
@@ -33,7 +30,6 @@ const ItemCount = ({ stock, initial, onAdd }) => {
       <button className="btn" onClick={() => onAdd(count)}>
         Add to Cart
       </button>
-      {/* <Btn text="Add to Cart" data={data} quantity={count} onClick={onAdd} /> */}
     </div>
   );
 };
