@@ -1,0 +1,115 @@
+.loader {
+  width: 100%;
+  height: 150px;
+  text-align: center;
+}
+
+.homeIntro {
+  background-image: url("../../../public/img/comedor-moderno-3d-sala-estar-decoracion-lujo.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
+  position: relative;
+}
+
+.homeIntro h1,
+.homeIntro p {
+  position: relative;
+  padding: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  border-radius: 5px;
+  color: rgb(63, 59, 52);
+}
+
+.homeIntro h1 {
+  font-size: 42px;
+  top: 50px;
+  background-color: rgba(167, 153, 146, 0.926);
+}
+
+.homeIntro p {
+  font-size: 20px;
+  font-weight: bold;
+  top: 70px;
+  background-color: #ecebe5d5;
+}
+
+.featured {
+  margin: 40px auto;
+  width: fit-content;
+  font-weight: 500;
+}
+
+.featured-section {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0 10%;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1200px) {
+  .featured-section {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    padding: 0 7%;
+  }
+}
+@media (max-width: 900px) {
+  .featured-section {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .homeIntro h1 {
+    font-size: 36px;
+  }
+  .featured-section {
+    grid-template-columns: 300px;
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+.divider {
+  margin: 20px 0;
+  height: 5px;
+  width: 100%;
+  background-color: rgb(161, 141, 111);
+}
+
+.hashtag {
+  font-size: 36px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.decoGalleryP {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.grid-item {
+  width: 200px;
+  height: 200px;
+}

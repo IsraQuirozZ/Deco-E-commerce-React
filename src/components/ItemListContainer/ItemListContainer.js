@@ -10,8 +10,10 @@ import {
   query,
   where,
 } from "firebase/firestore";
+import Loader from "../Loader/Loader";
 
 const ItemListContainer = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [items, setItems] = useState([]);
 
   const { categoryId } = useParams();
@@ -30,6 +32,7 @@ const ItemListContainer = () => {
         ...snapshot.data(),
       }));
       setItems(docs);
+      setIsLoading(false);
     });
   }, [categoryId]);
 
@@ -55,7 +58,13 @@ const ItemListContainer = () => {
           <Btn text="Tables" />
         </NavLink>
       </div>
-      <ItemList items={items} />
+      {isLoading ? (
+        <div className="loader">
+          <Loader />
+        </div>
+      ) : (
+        <ItemList items={items} />
+      )}
     </div>
   );
 };

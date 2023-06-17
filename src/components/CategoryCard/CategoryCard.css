@@ -1,0 +1,23 @@
+.categoryCard {
+  display: flex;
+  flex-direction: column;
+  /* padding: 20px; */
+  gap: 10px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.categoryCard img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.categoryCard h3 {
+  font-size: 28px;
+}
+
+.categoryCard p {
+  font-size: 18px;
+}

@@ -8,6 +8,7 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import { CartContextProvider } from "./contexts/CartContext";
 import PaymentForm from "./components/PaymentForm/PaymentForm";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route exact path="/cart" element={<CartListContainer />} />
           <Route exact path="/payment" element={<PaymentForm />} />
         </Routes>
+        <Footer />
       </CartContextProvider>
     </BrowserRouter>
   );
