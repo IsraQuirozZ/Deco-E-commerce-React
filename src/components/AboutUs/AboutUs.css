@@ -1,0 +1,59 @@
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.mainAboutUs {
+  padding: 40px 7%;
+}
+
+.mainP {
+  margin: 0 0 40px 0;
+}
+
+.aboutInfo {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.aboutInfoCol {
+  width: 45%;
+  min-width: 300px;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.aboutInfoCol h2 {
+  border-bottom: 2px solid black;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.aboutInfoCol p {
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
