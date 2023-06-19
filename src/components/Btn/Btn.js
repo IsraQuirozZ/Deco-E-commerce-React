@@ -1,7 +1,7 @@
 import React from "react";
 import "./Btn.css";
 
-const Btn = ({ text, onBuy }) => {
+const Btn = ({ text }) => {
   return <button className="btn">{text}</button>;
 };
 
