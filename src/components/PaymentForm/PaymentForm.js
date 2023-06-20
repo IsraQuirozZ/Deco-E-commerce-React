@@ -6,7 +6,7 @@ import { getFirestore, addDoc, collection } from "firebase/firestore";
 import { CartContext } from "../../contexts/CartContext";
 
 const PaymentForm = () => {
-  const { cart, totalPrice } = useContext(CartContext);
+  const { cart, totalPrice, totalProducts } = useContext(CartContext);
 
   const formBase = {
     cardHolder: "",
@@ -37,12 +37,11 @@ const PaymentForm = () => {
     //   setForm(formBase);
     //   setId(snapshot.id);
     // });
-    console.log(form);
     setCardHolder("Card Holder");
     setCardNum("#### #### #### ####");
     setExp("**/**");
     setCvv("***");
-    setForm(formBase);
+    // setForm(formBase);
   };
 
   const changeHandler = (e) => {
@@ -70,103 +69,68 @@ const PaymentForm = () => {
   };
 
   return (
-    <>
-      {typeof id !== "undefined" ? (
-        <p>El form se ha enviado con el id: {id}</p>
-      ) : (
-        ""
-      )}
-      <div className="paymentForm">
-        <form className="paymentForm__form" onSubmit={submitHandler}>
-          <h1>Payment Details</h1>
-          <label htmlFor="cardHolder">CARDHOLDER NAME</label>
+    <div className="paymentContainer">
+      <h1>Payment Details</h1>
+      <p>Complete your pusrchase by providing your payment details</p>
+      <p>
+        Remember that this project is an e-commerce simulator, please, do not
+        enter sensitive data, it will not save any sensitive information in the
+        database anyway.
+      </p>
+      <form className="paymentForm" onSubmit={submitHandler}>
+        <div className="cardDetails">
+          <label htmlFor="cardHolder">Card Holder</label>
           <input
             type="text"
-            id="cardHolder"
-            name="cardHolder"
-            placeholder="Your name"
-            value={form.cardHolder}
+            className="cardHolder"
+            placeholder="Card Holder Name"
+            value=""
             onChange={changeHandler}
           />
-          <label htmlFor="email">USER EMAIL</label>
+          <label htmlFor="cardNumber">Card Number</label>
           <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Your email"
-            value={form.email}
+            type="text"
+            className="cardNumber"
+            placeholder="1234 1234 1234 1234"
+            value=""
             onChange={changeHandler}
           />
-          <label htmlFor="phone">USER PHONE NUMBER</label>
-          <input
-            type="number"
-            id="phone"
-            name="phone"
-            placeholder="Your Phone Number"
-            value={form.phone}
-            onChange={changeHandler}
-          />
-          <label htmlFor="cardNum">CARD NUMBER</label>
-          <input
-            type="number"
-            id="cardNum"
-            name="cardNum"
-            placeholder="#### #### #### ####"
-            value={cardNum}
-            onChange={changeHandler}
-          />
-          {/* <div className="payForm__form--metaDataCard"> */}
-          <label htmlFor="cardExp">EXPIES</label>
-          <input
-            type="number"
-            id="cardExp"
-            name="cardExp"
-            placeholder="##/##"
-            value={exp}
-            onChange={changeHandler}
-          />
-          <label htmlFor="cvv">CVV</label>
-          <input
-            type="number"
-            id="cvv"
-            name="cvv"
-            placeholder="###"
-            value={cvv}
-            onChange={changeHandler}
-          />
-          {/* </div> */}
-          <h3>
-            Payment amount: <span>{totalPrice()}€</span>
-          </h3>
-          <div className="paymentForm__Form--btns">
-            <Link to="/cart">
-              <Btn text="Return" />
-            </Link>
-            <input className="btn paymentBtn" type="submit" value="Pay Now" />
-          </div>
-        </form>
-        <div className="cardContainer">
-          <div className="card">
-            <h2 className="card__top">Visa</h2>
-            <h3 className="card__number">{cardNum}</h3>
-            <div className="card__bottom">
-              <div className="card__botom--cardHolder">
-                <p>CARD HOLDER</p>
-                <h4>{cardHolder}</h4>
-              </div>
-              <div className="card__bottom--cardExp">
-                <p>EXPIES</p>
-                <h4>{exp}</h4>
-              </div>
-              <div className="card__bottom--cardCvv">
-                <p>CVV</p>
-                <h4>{cvv}</h4>
-              </div>
-            </div>
+          <div className="expiryCvv">
+            <label htmlFor="expiry">Expiry</label>
+            <input
+              type="date"
+              className="expiry"
+              placeholder="12/12"
+              value=""
+              onChange={changeHandler}
+            />
+            <label htmlFor="cvv">CVV</label>
+            <input
+              type="number"
+              className="cvv"
+              placeholder="123"
+              value=""
+              onChange={changeHandler}
+            />
           </div>
         </div>
+        <label htmlFor="discountCode">Discount Code</label>
+        <input
+          type="text"
+          className="discountCode"
+          placeholder="C00-20-OFF"
+          value=""
+          onChange={changeHandler}
+        />
+        <Btn text="Pay Now" />
+      </form>
+      <div className="paymentDetails">
+        <h2>You have to pay</h2>
+        <h3>${totalPrice()}</h3>
+        <h4>Products: {totalProducts()}</h4>
+        <div className="paymentCard"></div>
       </div>
-    </>
+    </div>
   );
 };
 

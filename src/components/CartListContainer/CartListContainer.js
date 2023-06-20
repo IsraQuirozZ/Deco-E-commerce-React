@@ -65,9 +65,15 @@ const CartListContainer = () => {
         <div className="cartListContainer__bottom">
           <h2>Products ({totalProducts()})</h2>
           <h2>Total: {totalPrice()} €</h2>
-          <Link to="/payment">
-            <Btn text="Buy Now" />
-          </Link>
+          {totalPrice() === 0 ? (
+            <Link to="/shop">
+              <Btn text="Add Products" />
+            </Link>
+          ) : (
+            <Link to="/payment">
+              <Btn text="Buy Now" />
+            </Link>
+          )}
         </div>
       </div>
     </>
